@@ -1,0 +1,684 @@
+// ----- 1. GENERAL STYLES ---- //
+// ----- 2. NAVBAR------------- //
+//------ 2.1 Top-Nav ---------- //
+//------ 2.2 Bottom-Nav ------- //
+//------ 2.1.1 Logo ----------- //
+//------ 2.2.2 Menu ----------- //
+//------ 2.2.3 Search Bar ----- //
+// ----- 3. FOOTER ------------ //
+// ----- 4. LANDING COMPONENT-- //
+// ----- 5. REGISTER AND LOGIN COMPONENT ---- //
+// ----- 6. CHECKOUT COMPONENT -------------- //
+// ----- 7. MODAL ADDRESS COMPONENT --------- //
+// ----- 8. DASHBOARD COMPONENT ------------- //
+// ----- 9. PRODUCTS ------------------------ //
+// ----- 10. CART --------------------------- //
+// ----- 11. OTHER MODAL STYLES ------------- //
+// ----- 12. CUSTOMIZED ICON COLORS AND SIZES ---- //
+// ----- 13. MEDIA QUERIES ----------------------- //
+
+$dark-overlay: rgba(144, 182, 169, 0.5);
+$main-red: #ea2929;
+$icon-size: 30px;
+$mainbgcolor: #f1f1f1;
+$darkgray: rgb(68, 68, 68);
+$lightgray: rgb(109, 108, 108);
+$light-overlay: rgba(#cddbdc, 0.8);
+
+// ----- 1. GENERAL STYLES ---- //
+body {
+  background: $mainbgcolor;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.content {
+  min-height: calc(100vh - 173px);
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.times {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+}
+
+.text-darkbrown {
+  color: #764c29;
+}
+
+.off-white {
+  background-color: #fafafa;
+}
+
+.text-gray {
+  color: #3d3c3c;
+}
+
+.light-gray {
+  color: $lightgray;
+}
+
+.dark-gray {
+  color: $darkgray;
+  font-weight: 100;
+}
+
+.bold-light-black {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bg-gray {
+  background: $mainbgcolor;
+}
+
+.bg-darkgray {
+  background: #666666;
+  color: white;
+}
+
+.products {
+  width: 98%;
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+.card {
+  border: none;
+}
+
+.divup {
+  border-bottom: 1px solid lightgray;
+}
+
+.btn-brown-custom {
+  background: lighten(#afa381, 4%);
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.btn-brown-custom:hover {
+  background: darken(#afa381, 4%);
+  color: black;
+}
+
+button,
+.btn-success-custom-small {
+  color: #3b2314;
+  background: darken(#badbdf, 4%);
+  border: none;
+}
+
+.btn-success-custom-small:hover {
+  background: lighten(#31c082, 4%);
+  color: white;
+}
+
+.btn-red {
+  border: none;
+  background: #ff332b;
+}
+
+.btn-success-custom {
+  color: #3b2314;
+  font-size: 1rem;
+  background: darken(#badbdf, 4%);
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-success-custom:hover {
+  background: lighten(#31c082, 4%);
+  color: white;
+}
+
+// ----- 2. NAVBAR---- //
+
+//---- 2.1 Top-Nav ---- //
+.nav-top {
+  background: darken(#c2b49a, 19%);
+  color: white;
+  a,
+  i,
+  span {
+    color: white !important;
+    font-size: 0.8rem;
+  }
+
+  li {
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .name {
+    text-transform: uppercase;
+  }
+
+  .nav-cont {
+    margin-right: -45px;
+  }
+}
+//---- 2.2 Bottom-Nav ---- //
+.navbar {
+  //---- 2.1.1 Logo ---- //
+  .navbar-brand {
+    margin-top: -48px;
+  }
+
+  //---- 2.2.2 Menu ---- //
+  .navbar-collapse {
+    a {
+      color: rgb(109, 108, 108);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #31c082;
+    }
+  }
+
+  //----- 2.2.3 Search Bar ---- //
+  .search {
+    font-size: 0.9rem;
+    font-weight: 100;
+  }
+}
+
+// ---- 3. FOOTER ---- //
+
+.footer {
+  background: gray;
+}
+
+// ---- 4. LANDING COMPONENT ---- //
+
+.home-section {
+  background: $mainbgcolor;
+  background-size: cover;
+  padding-top: 3rem;
+
+  //All other Wraps with Images and Underline Captions
+
+  .img-wrap {
+    h3 {
+      bottom: 48px;
+      font-size: 15px;
+      color: black;
+      text-transform: uppercase;
+      display: inline;
+      position: relative;
+    }
+
+    .underline-effect {
+      width: 100%;
+      opacity: 0.9;
+      line-height: 60px;
+      h3 {
+        overflow: hidden;
+      }
+      h3:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: -5px;
+        background: #000;
+        height: 4px;
+        transition-property: width;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+      h3:hover:after,
+      h3:focus:after,
+      h3:active:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+    .facefarm {
+      right: 5px;
+      // bottom: 3rem;
+      font-weight: 700;
+      background-color: $light-overlay;
+
+      padding: 2px 5px;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  //Heading
+  .heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $darkgray;
+  }
+
+  //Cards at the bottom of the Landing Page
+  .card-bottom {
+    color: #3d3c3c;
+    background-color: $mainbgcolor;
+  }
+
+  .small-par {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  //Use in the middle card at the foot of the Landing page
+
+  .border-y {
+    border-radius: 0;
+    border-left: 1px solid lighten(gray, 23%);
+    border-right: 1px solid lighten(gray, 23%);
+  }
+
+  //Bottom text of the lading page before the footer
+  .sm-width {
+    max-width: 17rem;
+  }
+}
+
+// ---- 5. REGISTER AND LOGIN COMPONENT ---- //
+.register,
+.login {
+  width: 98%;
+  max-width: 450px;
+  margin: 0 auto;
+  i {
+    color: #31c082;
+  }
+}
+.register,
+.login {
+  i {
+    color: #31c082;
+  }
+}
+
+// ---- 6. CHECKOUT COMPONENT ---- //
+.table {
+  thead {
+    tr {
+      padding: 0 0 0 0;
+      line-height: 30%;
+    }
+  }
+}
+
+.font-small {
+  font-size: 14px;
+}
+
+.small-height {
+  line-height: 5px;
+}
+
+.medium-height {
+  line-height: 13px;
+}
+
+.border-white {
+  border: 3px solid white;
+}
+
+.small-heading {
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 0%;
+}
+
+// ---- 7. MODAL ADDRESS COMPONENT ---- //
+
+.label {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+// ---- 8. DASHBOARD COMPONENT ---- //
+.dashboard {
+  .small-heading-1 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 0%;
+    color: $lightgray;
+  }
+
+  .no-border {
+    th {
+      border: none;
+    }
+  }
+
+  .text-green {
+    color: #badbdf;
+  }
+
+  .firstly {
+    border-left: #badbdf 10px solid;
+  }
+
+  .fa-user-alt {
+    font-size: 4.5rem;
+    color: #badbdf;
+  }
+
+  .toggle-nav {
+    margin-left: -150px !important;
+    a {
+      color: #417a81;
+    }
+  }
+
+  .heading-toggle {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    color: $lightgray;
+  }
+  .btn-warning {
+    background: rgb(250, 198, 103);
+  }
+
+  .table > tbody > tr > td,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > td,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > thead > tr > th {
+    display: block;
+    min-width: 100%;
+  }
+  .table > thead > tr > th {
+    display: none;
+  }
+
+  .table .filterBody span {
+    display: block;
+  }
+  .fa-certificate {
+    font-size: 1.7rem;
+  }
+
+  .text-caps {
+    text-transform: uppercase;
+  }
+}
+
+// ---- 9. PRODUCTS ---- //
+
+.products {
+  .orange {
+    color: #ff332b;
+  }
+
+  .CardImg {
+    height: 225px;
+    width: 50%;
+    display: block;
+  }
+}
+
+p.brand {
+  font-size: 0.9rem;
+}
+
+.isHidden {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.isShown {
+  max-height: 300px;
+  transition: all 0.5s ease-in-out;
+}
+
+// ---- 10. CART ---- //
+
+.cart {
+  transform: translateX(100%);
+  max-height: 38rem;
+  overflow-y: auto;
+  z-index: 10;
+  position: fixed;
+  top: 7.1rem;
+  right: 0;
+  width: 380px;
+  transition: 0.3s ease-in-out;
+}
+
+.card-border {
+  border: 2px solid lightgray;
+}
+
+.span-border {
+  border: 1px solid lightgray;
+}
+
+.cart.isShowing {
+  transform: none;
+}
+
+// ---- 11. OTHER MODAL STYLES ---- //
+
+.div-modal-img > img {
+  width: 55px;
+}
+
+.modal {
+  display: block !important;
+}
+
+/* Important part */
+.modal-dialog {
+  overflow-y: initial !important;
+}
+.modal-body {
+  height: 250px;
+  overflow-y: auto;
+}
+
+// ---- 12. CUSTOMIZED ICON COLORS AND SIZES ---- //
+
+.fa-plus,
+.fa-user {
+  color: green;
+}
+
+.fa-certificate,
+.fa-award {
+  color: #afa381;
+}
+
+.fa-minus {
+  color: $main-red;
+}
+.fa-trash {
+  color: lightslategray;
+}
+.fa-trash:hover {
+  color: $main-red;
+}
+
+.fa-trash,
+.fa-minus,
+.fa-plus {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+button.proceed {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+// ---- 13. MEDIA QUERIES ---- //
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .right-div {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .dashboard {
+    .table > tbody > tr > td,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > td,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > thead > tr > th {
+      display: table-cell;
+      min-width: 100%;
+    }
+    .table > thead > tr > th {
+      display: table-cell;
+    }
+
+    .table .filterBody span {
+      display: table;
+    }
+    .padding-container {
+      padding: 0px 50px 0px 50px;
+    }
+    .btn-medium-lg {
+      font-size: 0.7rem;
+    }
+  }
+
+  img.groceries,
+  img.supplements {
+    height: 14rem;
+  }
+  .products {
+    width: 315px;
+  }
+  .nav-top {
+    a,
+    i,
+    span {
+      font-size: 0.9rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+    }
+
+    .nav-cont {
+      padding-right: 30px;
+    }
+  }
+
+  .right-div {
+    margin-top: 0 !important;
+    padding: 0 15px 15px 0 !important;
+  }
+
+  .navMsg {
+    padding-left: 185px;
+    padding-top: 5px;
+    small {
+      font-size: 0.9rem;
+    }
+  }
+
+  .ordersList {
+    position: relative;
+    height: 350px;
+    overflow-y: auto;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 300px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  img.groceries,
+  img.supplements {
+    height: 19rem;
+  }
+  .img-wrap-overlap {
+    position: absolute;
+    z-index: 10;
+    width: 720px;
+    height: 70%;
+    top: 1.45rem;
+    img {
+      width: 70%;
+      height: 100%;
+    }
+
+    //Caption Img overlay
+    .img-caption {
+      position: relative;
+      left: 10.3rem;
+      bottom: 10.3rem;
+      h5,
+      h1 {
+        text-transform: uppercase;
+        color: white;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .products {
+    width: 310px;
+  }
+
+  .field {
+    position: relative;
+    h3 {
+      display: none;
+    }
+  }
+
+  .orders {
+    order: order-first;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  img.groceries,
+  img.supplements {
+    height: 22.8rem;
+  }
+  .img-wrap-overlap {
+    top: 2rem;
+    .img-caption {
+      bottom: 11.5rem;
+      left: 5rem;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .products {
+    width: 350px;
+  }
+}
